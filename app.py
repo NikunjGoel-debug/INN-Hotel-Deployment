@@ -29,7 +29,7 @@ def main():
     price=st.text_input('Enter the price offered for the room')
     adults=st.selectbox('Select the no adults in booking',[0,1,2,33,4])
     wkd=st.text_input('Enter the weekend nights in the booking')
-    park=(lambda x:1 is x=='Yes' else 0)(st.selectbox('Is parking included in the booking',['Yes','No']))
+    park=(lambda x:1 is x=='Yes'else 0)(st.selectbox('Is parking included in the booking',['Yes','No']))
     month=st.slider('What will be month of arrival',min_value=1,max_value=12,step=1)
     day=st.slider('What will be day of arrival',min_value=1,max_value=31,step=1)
     wkday_lambda=(lambda x: 0 if x=='Mon' else 1 if x=='Tue' else 2 if x=='Wed'else 3 if x=='Thus'
